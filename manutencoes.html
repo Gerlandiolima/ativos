@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manutenções</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef2f5;
+    padding:40px;
+}
+
+.topo{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom:30px;
+}
+
+h1{
+    color:#00695c;
+}
+
+.botao{
+    background:#1565c0;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.botao:hover{
+    background:#0d47a1;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    border-left:8px solid #2e7d32;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.icone{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.card h2{
+    color:#00695c;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.5;
+    margin-bottom:20px;
+}
+
+.abrir{
+    display:inline-block;
+    background:#1565c0;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.abrir:hover{
+    background:#0d47a1;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="topo">
+
+<div>
+<h1>🛠 Histórico de Manutenções</h1>
+<p>DJ-15V4 | Fase Azul</p>
+</div>
+
+<a class="botao" href="index.html">
+⬅ Voltar
+</a>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icone">📄</div>
+
+<h2>Relatório de Manutenção Corretiva</h2>
+
+<p>
+Substituição e intervenção corretiva no equipamento
+com registros técnicos da atividade executada.
+</p>
+
+<a class="abrir"
+href="manutencoes/NDP-ROC-LE-EAT-131-23-01.pdf"
+target="_blank">
+
+Abrir Relatório
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
