@@ -51,14 +51,35 @@ body{
     font-weight:bold;
 }
 
+.fases{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
 .fase{
-    background:#1565c0;
+    padding:10px 18px;
+    border-radius:8px;
     color:white;
-    display:inline-block;
-    padding:10px 20px;
-    border-radius:10px;
-    margin-top:10px;
+    text-decoration:none;
     font-weight:bold;
+    transition:0.3s;
+}
+
+.fase:hover{
+    transform:scale(1.05);
+}
+
+.azul{
+    background:#1565c0;
+}
+
+.branca{
+    background:#757575;
+}
+
+.vermelha{
+    background:#c62828;
 }
 
 .qrcode{
@@ -171,8 +192,20 @@ STATE GRID
 DJ - 15V4
 </div>
 
-<div class="fase">
+<div class="fases">
+
+<a href="fase-azul.html" class="fase azul">
 FASE AZUL
+</a>
+
+<a href="fase-branca.html" class="fase branca">
+FASE BRANCA
+</a>
+
+<a href="fase-vermelha.html" class="fase vermelha">
+FASE VERMELHA
+</a>
+
 </div>
 
 </div>
@@ -189,7 +222,7 @@ FASE AZUL
 
 <div class="card imagem">
 
-<img src="imagens/dj15v4.jpg.jpg">
+<img src="imagens/dj15v4-geral.jpg">
 
 </div>
 
