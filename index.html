@@ -1,150 +1,309 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema de Ativos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
+<title>Sistema de Ativos</title>
 
-    body{
-      margin:0;
-      padding:0;
-      font-family:Arial, sans-serif;
-      background:#f3f5f7;
-    }
+<style>
 
-    header{
-      background:#00695c;
-      color:white;
-      padding:25px;
-      text-align:center;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-    .container{
-      padding:20px;
-    }
+body{
+    background:#f3f4f6;
+    padding:20px;
+}
 
-    .card{
-      background:white;
-      border-radius:15px;
-      padding:20px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom:20px;
-    }
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+}
 
-    h1{
-      margin:0;
-    }
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
 
-    h2{
-      color:#00695c;
-    }
+.topo{
+    grid-column:1/3;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-    .info{
-      margin-bottom:10px;
-    }
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#00695c;
+}
 
-    .botao{
-      display:block;
-      background:#1565c0;
-      color:white;
-      text-decoration:none;
-      padding:15px;
-      border-radius:10px;
-      margin-top:10px;
-      text-align:center;
-      font-weight:bold;
-    }
+.equipamento{
+    font-size:42px;
+    font-weight:bold;
+}
 
-    .botao:hover{
-      background:#0d47a1;
-    }
+.fase{
+    background:#1565c0;
+    color:white;
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:10px;
+    margin-top:10px;
+    font-weight:bold;
+}
 
-    footer{
-      background:#00695c;
-      color:white;
-      text-align:center;
-      padding:15px;
-      margin-top:20px;
-    }
+.qrcode{
+    text-align:center;
+}
 
-  </style>
+.qrcode img{
+    width:140px;
+}
 
+.imagem img{
+    width:100%;
+    border-radius:15px;
+}
+
+.titulo{
+    color:#00695c;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.info{
+    margin-bottom:12px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:8px;
+}
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#f7f7f7;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:12px;
+    text-decoration:none;
+    color:#333;
+    transition:0.3s;
+}
+
+.menu-item:hover{
+    background:#e3f2fd;
+}
+
+.icone{
+    font-size:30px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#00695c;
+    color:white;
+    padding:10px;
+}
+
+table td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.footer{
+    grid-column:1/3;
+    background:#00695c;
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-radius:15px;
+    font-weight:bold;
+}
+
+@media(max-width:900px){
+
+.container{
+    grid-template-columns:1fr;
+}
+
+.topo{
+    grid-column:1;
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+}
+
+.footer{
+    grid-column:1;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Sistema Inteligente de Gestão de Ativos</h1>
-  <p>SE Curral Novo do Piauí II</p>
-</header>
-
 <div class="container">
 
-  <div class="card">
+<div class="card topo">
 
-    <h2>DJ - 15V4 | FASE AZUL</h2>
-    
-    <img src="imagens/dj15v4.jpg.jpg" 
-     alt="DJ 15V4"
-     style="width:100%; max-width:700px; border-radius:15px; margin-bottom:20px;">
+<div>
 
-    <div class="info">
-      <strong>Tipo:</strong> Disjuntor
-    </div>
+<div class="logo">
+STATE GRID
+</div>
 
-    <div class="info">
-      <strong>Tensão:</strong> 500 kV
-    </div>
+<div class="equipamento">
+DJ - 15V4
+</div>
 
-    <div class="info">
-      <strong>Fabricante:</strong> ABB
-    </div>
-
-    <div class="info">
-      <strong>Modelo:</strong> LTB 145 D1/B
-    </div>
-
-    <div class="info">
-      <strong>Funcional:</strong> 15V4
-    </div>
-
-    <div class="info">
-      <strong>Última manutenção:</strong> 13/04/2026
-    </div>
-
-    <div class="info">
-      <strong>Próxima RMM:</strong> 15/04/2027
-    </div>
-
-    <a class="botao" href="#">
-      Documentos Técnicos
-    </a>
-
-    <a class="botao" href="#">
-      Histórico de Manutenções
-    </a>
-
-    <a class="botao" href="#">
-      Termovisão
-    </a>
-
-    <a class="botao" href="#">
-      Fotos do Equipamento
-    </a>
-
-    <a class="botao" href="#">
-      RMM e Planejamento
-    </a>
-
-  </div>
+<div class="fase">
+FASE AZUL
+</div>
 
 </div>
 
-<footer>
-  Segurança em 1º Lugar • Gestão Inteligente de Ativos
-</footer>
+<div class="qrcode">
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://gerlandiolima.github.io/ativos/">
+
+<p>Escaneie o QR Code</p>
+
+</div>
+
+</div>
+
+<div class="card imagem">
+
+<img src="imagens/dj15v4.jpg.jpg">
+
+</div>
+
+<div class="card">
+
+<div class="titulo">
+DADOS DO EQUIPAMENTO
+</div>
+
+<div class="info"><strong>Subestação:</strong> SE Curral Novo II</div>
+<div class="info"><strong>Tipo:</strong> Disjuntor</div>
+<div class="info"><strong>Tensão:</strong> 500 kV</div>
+<div class="info"><strong>Fabricante:</strong> ABB</div>
+<div class="info"><strong>Modelo:</strong> LTB 145 D1/B</div>
+<div class="info"><strong>Funcional:</strong> 15V4</div>
+<div class="info"><strong>Fase:</strong> Azul</div>
+
+</div>
+
+<div class="card">
+
+<div class="titulo">
+ACESSO RÁPIDO
+</div>
+
+<a class="menu-item" href="#">
+<div class="icone">📁</div>
+<div>Documentos Técnicos</div>
+</a>
+
+<a class="menu-item" href="#">
+<div class="icone">🛠️</div>
+<div>Manutenções</div>
+</a>
+
+<a class="menu-item" href="#">
+<div class="icone">🌡️</div>
+<div>Termovisão</div>
+</a>
+
+<a class="menu-item" href="#">
+<div class="icone">📷</div>
+<div>Fotos do Equipamento</div>
+</a>
+
+<a class="menu-item" href="#">
+<div class="icone">📋</div>
+<div>RMM e Planos</div>
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="titulo">
+ÚLTIMAS MANUTENÇÕES
+</div>
+
+<table>
+
+<tr>
+<th>Data</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+
+<tr>
+<td>13/04/2026</td>
+<td>Preventiva</td>
+<td>Manutenção Semestral</td>
+</tr>
+
+<tr>
+<td>15/01/2026</td>
+<td>Termovisão</td>
+<td>Inspeção Termográfica</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<div class="titulo">
+PRÓXIMAS ATIVIDADES
+</div>
+
+<table>
+
+<tr>
+<th>Atividade</th>
+<th>Data</th>
+</tr>
+
+<tr>
+<td>Termovisão</td>
+<td>15/07/2026</td>
+</tr>
+
+<tr>
+<td>RMM</td>
+<td>15/04/2027</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="footer">
+SEGURANÇA EM 1º LUGAR • GESTÃO INTELIGENTE DE ATIVOS
+</div>
+
+</div>
 
 </body>
 </html>
