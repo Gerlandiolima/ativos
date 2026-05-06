@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,163 +9,96 @@
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
 body{
-    background:#eef2f5;
-    padding:40px;
+    font-family:Arial;
+    background:#f4f4f4;
+    padding:20px;
 }
 
-.topo{
-    background:white;
-    border-radius:15px;
-    padding:30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    margin-bottom:30px;
-}
-
-.titulo{
+h1{
+    text-align:center;
     color:#00695c;
 }
 
-.titulo h1{
-    font-size:42px;
+.container{
+    max-width:900px;
+    margin:auto;
 }
 
-.titulo p{
-    margin-top:10px;
-    color:#666;
-    font-size:18px;
+.documento{
+    background:white;
+    padding:20px;
+    margin-top:20px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.documento h2{
+    color:#0066cc;
 }
 
 .botao{
-    background:#1565c0;
-    color:white;
-    text-decoration:none;
-    padding:14px 30px;
-    border-radius:10px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.botao:hover{
-    background:#0d47a1;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-    border-left:8px solid #1565c0;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.icone{
-    font-size:50px;
-    margin-bottom:15px;
-}
-
-.card h2{
-    color:#00695c;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#555;
-    margin-bottom:20px;
-    line-height:1.5;
-}
-
-.abrir{
     display:inline-block;
-    background:#1565c0;
+    margin-top:15px;
+    background:#0066cc;
     color:white;
-    text-decoration:none;
-    padding:12px 25px;
+    padding:12px 20px;
     border-radius:8px;
+    text-decoration:none;
     font-weight:bold;
 }
 
-.abrir:hover{
-    background:#0d47a1;
+.voltar{
+    display:block;
+    width:250px;
+    text-align:center;
+    margin:30px auto;
+    background:#00695c;
 }
 
 </style>
 
 </head>
+
 <body>
 
-<div class="topo">
+<div class="container">
 
-<div class="titulo">
-<h1>📂 Documentos Técnicos</h1>
-<p>DJ-15V4 | Fase Azul | SE Curral Novo do Piauí II</p>
-</div>
+<h1>Documentos Técnicos DJ-15V4</h1>
 
-<a class="botao" href="index.html">
-⬅ Voltar ao Sistema
+<a class="botao voltar" href="index.html">
+Voltar ao Sistema
 </a>
 
-</div>
+<div class="documento">
 
-<div class="grid">
-
-<div class="card">
-
-<div class="icone">📘</div>
-
-<h2>Manual Interno do Disjuntor</h2>
+<h2>Interno do Disjuntor</h2>
 
 <p>
-Documento técnico interno contendo características
-construtivas, operação e manutenção do disjuntor.
+Documento técnico interno do disjuntor DJ-15V4.
 </p>
 
-<a class="abrir"
-href="documentos/manual-disjuntor.pdf"
-target="_blank">
+<a class="botao" target="_blank"
+href="documentos/5192170011.100 Interno do Disjuntor.pdf">
 
-Abrir Documento
+Abrir PDF
 
 </a>
 
 </div>
 
-<div class="card">
+<div class="documento">
 
-<div class="icone">📐</div>
-
-<h2>Diagrama Painel QPCZ-L2P</h2>
+<h2>Painel QPCZ-L2P-A</h2>
 
 <p>
-Diagrama funcional do painel de comando,
-proteção e acionamento do disjuntor DJ-15V4.
+Diagrama técnico funcional do painel.
 </p>
 
-<a class="abrir"
-href="documentos/diagrama-funcional.pdf"
-target="_blank">
+<a class="botao" target="_blank"
+href="documentos/ACS-EL-SEC-0104-5101 - PAINEL QPCZ-L2P-A FUNCIONAL R7.pdf">
 
-Abrir Documento
+Abrir PDF
 
 </a>
 
