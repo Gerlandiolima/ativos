@@ -2,48 +2,110 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Documentos Técnicos</title>
 
 <style>
 
-body{
-    font-family:Arial;
-    background:#f4f4f4;
+*{
     margin:0;
-    padding:30px;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-h1{
-    color:#00695c;
-    text-align:center;
+body{
+    background:#eef2f5;
+    padding:40px;
 }
 
-.container{
-    max-width:1000px;
-    margin:auto;
-}
-
-.doc{
+.topo{
     background:white;
-    padding:20px;
-    margin-top:20px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    border-radius:15px;
+    padding:30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom:30px;
 }
 
-a{
-    text-decoration:none;
-    color:#1565c0;
-    font-weight:bold;
+.titulo{
+    color:#00695c;
+}
+
+.titulo h1{
+    font-size:42px;
+}
+
+.titulo p{
+    margin-top:10px;
+    color:#666;
+    font-size:18px;
 }
 
 .botao{
+    background:#1565c0;
+    color:white;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.botao:hover{
+    background:#0d47a1;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+    border-left:8px solid #1565c0;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.icone{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.card h2{
+    color:#00695c;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#555;
+    margin-bottom:20px;
+    line-height:1.5;
+}
+
+.abrir{
     display:inline-block;
     background:#1565c0;
     color:white;
+    text-decoration:none;
     padding:12px 25px;
     border-radius:8px;
-    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.abrir:hover{
+    background:#0d47a1;
 }
 
 </style>
@@ -51,26 +113,61 @@ a{
 </head>
 <body>
 
-<div class="container">
+<div class="topo">
 
-<h1>Documentos Técnicos DJ-15V4</h1>
-
-<a class="botao" href="index.html">
-Voltar ao Sistema
-</a>
-
-<div class="doc">
-📄 
-<a 5192170011.100 Interno do Disjuntor.pdf " target="_blank">
-Manual Interno do Disjuntor
-</a>
+<div class="titulo">
+<h1>📂 Documentos Técnicos</h1>
+<p>DJ-15V4 | Fase Azul | SE Curral Novo do Piauí II</p>
 </div>
 
-<div class="doc">
-📄 
-<a href="documentos/ACS-EL-SEC-0104-5101 - PAINEL QPCZ-L2P-A FUNCIONAL R7.pdf" target="_blank">
-Diagrama Painel QPCZ-L2P
+<a class="botao" href="index.html">
+⬅ Voltar ao Sistema
 </a>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icone">📘</div>
+
+<h2>Manual Interno do Disjuntor</h2>
+
+<p>
+Documento técnico interno contendo características
+construtivas, operação e manutenção do disjuntor.
+</p>
+
+<a class="abrir"
+href="documentos/manual-disjuntor.pdf"
+target="_blank">
+
+Abrir Documento
+
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="icone">📐</div>
+
+<h2>Diagrama Painel QPCZ-L2P</h2>
+
+<p>
+Diagrama funcional do painel de comando,
+proteção e acionamento do disjuntor DJ-15V4.
+</p>
+
+<a class="abrir"
+href="documentos/diagrama-funcional.pdf"
+target="_blank">
+
+Abrir Documento
+
+</a>
+
 </div>
 
 </div>
