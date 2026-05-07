@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,18 +22,10 @@ body{
 }
 
 .topo{
-    background:white;
-    padding:30px;
-    border-radius:15px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    margin-bottom:30px;
-}
-
-h1{
-    color:#00695c;
+    margin-bottom:35px;
 }
 
 .botao{
@@ -48,59 +41,15 @@ h1{
     background:#0d47a1;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    border-left:8px solid #2e7d32;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.icone{
-    font-size:55px;
-    margin-bottom:15px;
-}
-
-.card h2{
-    color:#00695c;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#555;
-    line-height:1.5;
-    margin-bottom:20px;
-}
-
-.abrir{
-    display:inline-block;
-    background:#1565c0;
-    color:white;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-.abrir:hover{
-    background:#0d47a1;
-}
 .titulo-tabela{
     color:#00695c;
-    margin-top:40px;
     margin-bottom:20px;
     font-size:32px;
+}
+
+.tabela-container{
+    overflow-x:auto;
+    margin-bottom:35px;
 }
 
 table{
@@ -110,7 +59,7 @@ table{
     border-radius:15px;
     overflow:hidden;
     box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    margin-bottom:35px;
+    min-width:800px;
 }
 
 th{
@@ -155,6 +104,7 @@ tr:hover{
     color:#444;
     line-height:1.5;
 }
+
 @media(max-width:900px){
 
 body{
@@ -165,30 +115,6 @@ body{
     flex-direction:column;
     gap:20px;
     text-align:center;
-}
-
-.grid{
-    grid-template-columns:1fr;
-}
-
-table{
-    display:block;
-    overflow-x:auto;
-    white-space:nowrap;
-}
-
-th{
-    font-size:13px;
-    padding:12px;
-}
-
-td{
-    font-size:13px;
-    padding:12px;
-}
-
-.card{
-    padding:18px;
 }
 
 .titulo-tabela{
@@ -209,10 +135,14 @@ td{
 }
 
 }
+
 </style>
 
 </head>
+
 <body>
+
+<div class="topo">
 
 <a class="botao" href="index.html">
 ⬅ Voltar
@@ -220,36 +150,23 @@ td{
 
 </div>
 
-<div class="grid">
+<h2 class="titulo-tabela">
+Histórico Técnico de Intervenções
+</h2>
 
-<div class="card">
-
-<div class="icone">📄</div>
-
-<h2>Relatório de Manutenção Corretiva</h2>
-
-<p>
-Substituição e intervenção corretiva no equipamento
-com registros técnicos da atividade executada.
-</p>
-
-</a>
-
-</div>
-
-<h2 class="titulo-tabela">Histórico Técnico de Intervenções</h2>
-
-<div style="overflow-x:auto;">
+<div class="tabela-container">
 
 <table>
 
 <thead>
+
 <tr>
 <th>Data</th>
 <th>Intervenção</th>
 <th>Descrição Técnica</th>
 <th>Equipe</th>
 </tr>
+
 </thead>
 
 <tbody>
@@ -322,10 +239,6 @@ Aplicação de lubrificante em pontos móveis do mecanismo de operação.
 <li>Não há pendências corretivas abertas para o DJ-15V4.</li>
 
 </ul>
-
-</div>
-
-</div>
 
 </div>
 
